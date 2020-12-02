@@ -57,10 +57,13 @@ def get_sorted_entries_from_file(filename):
     entries.sort()
     return entries
 
-if __name__ == '__main__':
+def main():
     entries = get_sorted_entries_from_file('entries.txt')
     target = 2020
     two_sum = get_entry_two_sum(entries, target)
     print("Product of two sum for target of {0} is {1}".format(target, two_sum[0] * two_sum[1]))
     three_sum = get_entry_three_sum(entries, target)
     print("Product of three sum for target of {0} is {1}".format(target, three_sum[0] * three_sum[1] * three_sum[2]))
+
+if __name__ == '__main__':
+    main()
